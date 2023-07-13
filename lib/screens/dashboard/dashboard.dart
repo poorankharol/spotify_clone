@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_clone/const.dart';
-import 'package:spotify_clone/screens/home/home.dart';
+import 'package:spotify_clone/screens/home/widget/savan_home.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -12,10 +11,10 @@ class DashboardScreen extends StatefulWidget {
 int _selectedIndex = 0;
 
 List<Widget> _pages = <Widget>[
-  const HomeScreen(),
-  const HomeScreen(),
-  const HomeScreen(),
-  const HomeScreen(),
+  const SavanHome(),
+  Container(),
+  Container(),
+  Container()
 ];
 
 class _DashboardScreenState extends State<DashboardScreen> {
@@ -29,72 +28,75 @@ class _DashboardScreenState extends State<DashboardScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Stack(
-          children: [
-            _pages.elementAt(_selectedIndex),
-            Positioned(
-              bottom: 0,
-              child: Column(
-                children: [
-                  Container(
-                    height: 65,
-                    width: MediaQuery.of(context).size.width,
-                    decoration: const BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [
-                          Color.fromARGB(255, 0, 0, 0),
-                          Color.fromARGB(200, 0, 0, 0),
-                          Color.fromARGB(135, 0, 0, 0),
-                          Color.fromARGB(80, 0, 0, 0),
-                          Colors.transparent,
-                        ],
-                        begin: Alignment.bottomCenter,
-                        end: Alignment.topCenter,
-                        stops: [0.0, 0.3, 0.6, 0.75, 1.0],
+        child: SizedBox(
+          height: MediaQuery.of(context).size.height,
+          child: Stack(
+            children: [
+              _pages.elementAt(_selectedIndex),
+              Positioned(
+                bottom: 0,
+                child: Column(
+                  children: [
+                    Container(
+                      height: 65,
+                      width: MediaQuery.of(context).size.width,
+                      decoration: const BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [
+                            Color.fromARGB(255, 0, 0, 0),
+                            Color.fromARGB(200, 0, 0, 0),
+                            Color.fromARGB(135, 0, 0, 0),
+                            Color.fromARGB(80, 0, 0, 0),
+                            Colors.transparent,
+                          ],
+                          begin: Alignment.bottomCenter,
+                          end: Alignment.topCenter,
+                          stops: [0.0, 0.3, 0.6, 0.75, 1.0],
+                        ),
                       ),
-                    ),
-                    padding: const EdgeInsets.only(right: 0, left: 0, top: 15),
-                    child: Row(
-                      children: [
-                        BottomNavBarItem(
-                          title: 'Home',
-                          onTap: () {
-                            _onItemTapped(0);
-                          },
-                          index: 0,
-                          iconData: Icons.home_filled,
-                        ),
-                        BottomNavBarItem(
-                          title: 'Search',
-                          onTap: () {
-                            _onItemTapped(1);
-                          },
-                          index: 1,
-                          iconData: Icons.search_rounded,
-                        ),
-                        BottomNavBarItem(
-                          title: 'Your Library',
-                          onTap: () {
-                            _onItemTapped(2);
-                          },
-                          index: 2,
-                          iconData: Icons.library_music_rounded,
-                        ),
-                        BottomNavBarItem(
-                          title: 'Premium',
-                          onTap: () {
-                            _onItemTapped(3);
-                          },
-                          index: 3,
-                          iconData: Icons.workspace_premium,
-                        ),
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            )
-          ],
+                      padding: const EdgeInsets.only(right: 0, left: 0, top: 15),
+                      child: Row(
+                        children: [
+                          BottomNavBarItem(
+                            title: 'Home',
+                            onTap: () {
+                              _onItemTapped(0);
+                            },
+                            index: 0,
+                            iconData: Icons.home_filled,
+                          ),
+                          BottomNavBarItem(
+                            title: 'Search',
+                            onTap: () {
+                              _onItemTapped(1);
+                            },
+                            index: 1,
+                            iconData: Icons.search_rounded,
+                          ),
+                          BottomNavBarItem(
+                            title: 'Your Library',
+                            onTap: () {
+                              _onItemTapped(2);
+                            },
+                            index: 2,
+                            iconData: Icons.library_music_rounded,
+                          ),
+                          BottomNavBarItem(
+                            title: 'Premium',
+                            onTap: () {
+                              _onItemTapped(3);
+                            },
+                            index: 3,
+                            iconData: Icons.workspace_premium,
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

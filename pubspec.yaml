@@ -40,6 +40,9 @@ dependencies:
   logging: ^1.2.0
   dart_des: ^1.0.2
   http: ^1.1.0
+  dio: ^5.2.1+1
+  flutter_riverpod: ^2.3.6
+  cached_network_image: ^3.2.3
 
 dev_dependencies:
   flutter_test:

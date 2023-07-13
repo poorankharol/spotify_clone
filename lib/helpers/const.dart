@@ -113,7 +113,7 @@ List<SearchListItem> kAllSearh = [
       title: 'Soulfull',
       img:
       'https://i.pinimg.com/736x/0b/ba/16/0bba16d65137736c3ce02eb847b3a09d.jpg',
-      color: Color.fromARGB(187, 255, 42, 0)),
+      color: const Color.fromARGB(187, 255, 42, 0)),
   SearchListItem(
     title: 'Holiday',
     img:
@@ -134,7 +134,7 @@ List<SearchListItem> kAllSearh = [
       title: 'Soulfull',
       img:
       'https://i.pinimg.com/736x/0b/ba/16/0bba16d65137736c3ce02eb847b3a09d.jpg',
-      color: Color.fromARGB(187, 255, 42, 0)),
+      color: const Color.fromARGB(187, 255, 42, 0)),
   SearchListItem(
       title: 'Sleep',
       img:
@@ -144,7 +144,7 @@ List<SearchListItem> kAllSearh = [
       title: 'Soulfull',
       img:
       'https://i.pinimg.com/736x/0b/ba/16/0bba16d65137736c3ce02eb847b3a09d.jpg',
-      color: Color.fromARGB(187, 255, 42, 0)),
+      color: const Color.fromARGB(187, 255, 42, 0)),
   SearchListItem(
       title: 'Trending',
       img:

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_clone/const.dart';
+import 'package:spotify_clone/helpers/const.dart';
 
 
 class RecentItems extends StatelessWidget {
@@ -9,7 +9,7 @@ class RecentItems extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(
-          left: 0, right: 0, bottom: 0, top: 25),
+          left: 0, right: 0, bottom: 0, top: 20),
       child: SizedBox(
         height: 220,
         child: GridView.builder(
